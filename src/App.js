@@ -7,7 +7,7 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <div>
+    <div style={{background: "#141414"}}>
         <Menu />
         
         <BannerMain 
@@ -15,6 +15,15 @@ function App() {
           url={dadosIniciais.categorias[0].videos[0].url}
           videoDescription={"Os reis do FLOW"}
         />
+
+        <Carousel ignoreFirstVideo category={dadosIniciais.categorias[0]}/>
+        <Carousel ignoreFirstVideo category={dadosIniciais.categorias[1]}/>
+        <Carousel ignoreFirstVideo category={dadosIniciais.categorias[2]}/>
+        <Carousel ignoreFirstVideo category={dadosIniciais.categorias[3]}/>
+        <Carousel ignoreFirstVideo category={dadosIniciais.categorias[4]}/>
+        <Carousel ignoreFirstVideo category={dadosIniciais.categorias[5]}/>
+
+        <Footer/>
     </div>
   );
 }

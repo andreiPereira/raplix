@@ -2,11 +2,11 @@ import React from "react";
 import Footer from "../Footer";
 import Menu from "../Menu";
 
-function PageDefault(){
+function PageDefault({children}){
     return (
         <>
             <Menu />
-            aaa
+            {children}
             <Footer />
         </>
     )

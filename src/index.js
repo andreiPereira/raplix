@@ -1,27 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Home from './pages/Home';
+import CadastroVideo from './pages/cadastro/Video';
 
-import { createRoot } from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />
-  },
-  {
-    path: "cadastro/video",
-    element: <div>Cadastro de Video = D</div>,
-  },
-]);
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route >
+      <Route path="/" element={<Home />} />
+      <Route path="cadastro/video" element={<CadastroVideo />}/>
+    </Route>
+  )
+);
 
-createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );

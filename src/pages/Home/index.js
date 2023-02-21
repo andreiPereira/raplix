@@ -7,13 +7,13 @@ import PageDefault from '../../components/PageDefault';
 function Home() {
   return (
     <PageDefault >
-      <div style={{background: "#141414"}}>
+      <div>
 
         <BannerMain 
           videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
           url={dadosIniciais.categorias[0].videos[0].url}
           videoDescription={"Os reis do FLOW"}
-          />
+        />
 
         <Carousel ignoreFirstVideo category={dadosIniciais.categorias[0]}/>
         <Carousel category={dadosIniciais.categorias[1]}/>

@@ -4,7 +4,7 @@ import PageDefault from "../../../components/PageDefault";
 function CadastroVideo() {
     return (
         <PageDefault>
-            Pagina de Cadastro de video
+            <label style={{color:'white'}}> Pagina de Cadastro de video</label>
         </PageDefault>
     )
 }
